@@ -35,7 +35,7 @@ def OddIndex(word):
     return "".join([word[i] for i in range(len(word)) if i%2 !=0])
     #print(newWord)
     #return "".join(newWord)
-print(OddIndex("String"))
+#print(OddIndex("String"))
 
 def OddIndex2 (word): 
     final = ""
@@ -51,8 +51,13 @@ def sortedAlp(List1):
 #print(sortedAlp(["Hasin","Anik","Mridula"]))
 
 #8)Programatically generate lists or strings of all alphabets in lowercase
-def lower(word):
-    return list(word.lower())    #sorted(list(String.lower()))
+def lowerAlphabets():
+    #ascii number for small letters a-z is 97 to 123
+    
+    return ", ".join([chr(nums) for nums in range (97,123)])  #prints strings
+    #return [chr(nums) for nums in range (97,123)]   #prints list
+
+print(lowerAlphabets())
 
 #print(lower("ABCDhRID"))
 
@@ -80,5 +85,5 @@ def squaredDict(List1):
 
     return mydict
 
-print(squaredDict([1,2,3,4]))
+#print(squaredDict([1,2,3,4]))
 
