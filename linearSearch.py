@@ -3,8 +3,14 @@ print("Linear Search: Start from the 1st element to the last element until it fi
 
 def lSearch(num, list1):
     for elem in range(len(list1)):
-        if (list1[elem] == num):return elem
+        if (int(list1[elem]) == num):return elem
+            #return "Invalid input"
     return -1
 
-list1 = [1,2,4,5,6]
-print(lSearch(5,list1))
+num = int(input("Entr a number: "))
+users = input("Enter a list seperated by a space: ")
+list1 = users.split()
+for elem in range(len(list1)):
+    list1[elem] = int(list1[elem])
+
+print("First Occurence of the num is " + str(lSearch(num,list1)))
